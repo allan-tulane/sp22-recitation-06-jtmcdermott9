@@ -3,8 +3,21 @@ import tabulate
 
 
 def qsort(a, pivot_fn):
-    ## TO DO
-    pass
+  ## TO DO
+  if len(a) <= 1:
+    return a
+  else:
+    l1 = []
+    l3 = []
+    pivot = a[0]
+    for i in a:
+      if i < pivot:
+        l1.append(i)
+      else:
+        l3.append(i)
+    l2 = [a[0]]
+    
+    return qsort(l1, pivot_fn) + qsort(l3, pivot_fn)
     
 def time_search(sort_fn, mylist):
     """
@@ -40,9 +53,9 @@ def compare_sort(sizes=[100, 200, 500, 1000, 2000, 5000, 10000, 20000, 50000, 10
       for each method to run on each value of n
     """
     ### TODO - sorting algorithms for comparison
-    qsort_fixed_pivot = # 
-    qsort_random_pivot = #
-    tim_sort = #
+    qsort_fixed_pivot = qsort(sizes, lambda a: a[0])
+    qsort_random_pivot = qsort(sizes, lambda a: a[random.randint(0,len(a)-1)] )
+    tim_sort = sorted(sizes)
     result = []
     for size in sizes:
         # create list in ascending order
@@ -67,5 +80,5 @@ def print_results(results):
 def test_print():
     print_results(compare_sort())
 
-random.seed()
-test_print()
+#random.seed()
+#test_print()
