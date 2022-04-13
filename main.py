@@ -9,7 +9,7 @@ def qsort(a, pivot_fn):
   else:
     l1 = []
     l3 = []
-    pivot = a[0]
+    pivot = pivot_fn(a)
     for i in a:
       if i < pivot:
         l1.append(i)
