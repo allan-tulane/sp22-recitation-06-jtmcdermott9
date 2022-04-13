@@ -54,7 +54,7 @@ def compare_sort(sizes=[100, 200, 500, 1000, 2000, 5000, 10000, 20000, 50000, 10
     """
     ### TODO - sorting algorithms for comparison
     qsort_fixed_pivot = qsort(sizes, lambda a: a[0])
-    qsort_random_pivot = qsort(sizes, lambda a: a[random.randint(0,len(a)-1)] )
+    qsort_random_pivot = qsort(sizes, lambda a: random.choice(a))
     tim_sort = sorted(sizes)
     result = []
     for size in sizes:
