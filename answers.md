@@ -1,7 +1,7 @@
 # CMPS 2200 Reciation 6
 ## Answers
 
-**Name:**_________________________
+**Name:**______JT McDermott___________________
 
 
 Place all written answers from `recitation-06.md` here for easier grading.
