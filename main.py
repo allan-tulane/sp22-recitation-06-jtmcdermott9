@@ -63,7 +63,7 @@ def time_search(sort_fn, mylist):
     return (time.time() - start) * 1000
     ###
 
-def compare_sort(sizes=[10, 20, 50, 100, 10000, 200000]):
+def compare_sort(sizes=[10, 50, 100, 500, 1000, 5000, 10000, 20000, 50000, 200000]):
     """
     Compare the running time of different sorting algorithms.
 
